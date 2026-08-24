@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import Icon from '../components/Icon';
 
+// next/image with unoptimized:true does not auto-prefix basePath on static
+// export — prepend it manually so screenshots resolve under GitHub Pages.
+const basePath = process.env.GITHUB_ACTIONS ? '/landing-booklibre' : '';
+
 const FEATURES = [
   {
     icon: 'filter_alt',
@@ -98,7 +102,7 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6">
           <div className="w-full max-w-4xl overflow-hidden rounded-2xl border border-outline-variant shadow-lg">
             <Image
-              src="/screenshot-catalogo.png"
+              src={`${basePath}/screenshot-catalogo.png`}
               alt="Catálogo de BookLibre con filtros por género y disponibilidad"
               width={910}
               height={513}
@@ -107,7 +111,7 @@ export default function Home() {
           </div>
           <div className="w-full max-w-4xl overflow-hidden rounded-2xl border border-outline-variant shadow-lg">
             <Image
-              src="/screenshot-detalle.png"
+              src={`${basePath}/screenshot-detalle.png`}
               alt="Detalle de un libro con sinopsis, reseñas y reserva"
               width={910}
               height={513}
