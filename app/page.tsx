@@ -72,15 +72,8 @@ export default function Home() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://lorengrz.github.io/BookLibre/"
-            className="flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-bold text-on-primary shadow-md transition-transform hover:scale-[1.02]"
-          >
-            <Icon name="open_in_new" />
-            Probar la app
-          </a>
-          <a
             href="https://github.com/LorenGrz/BookLibre"
-            className="flex items-center gap-2 rounded-xl border border-outline-variant px-6 py-3 font-bold text-primary transition-colors hover:bg-surface"
+            className="flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-bold text-on-primary shadow-md transition-transform hover:scale-[1.02]"
           >
             <Icon name="code" />
             Ver el código
